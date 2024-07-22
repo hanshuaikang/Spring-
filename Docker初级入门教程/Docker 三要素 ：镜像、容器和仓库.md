@@ -62,7 +62,8 @@ Person p2 = new Person();
 
 镜像 容器 仓库 他们三者之间的关系图如下:
 
-![img](https://user-gold-cdn.xitu.io/2019/10/7/16da5e181bb1cf4d?imageView2/0/w/1280/h/960/ignore-error/1) 
+![img](https://github.com/hanshuaikang/HanShu-Note/blob/master/Docker%E5%88%9D%E7%BA%A7%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/image/1100338-20181011200343656-1972949758.png?raw=true) 
+
 
 
 

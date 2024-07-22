@@ -36,7 +36,7 @@
 
 `节点：`知道了，滚。
 
-![image-20191204193012738](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20191204193012738.png)
+![image-20191204193012738](./images/1.png)
 
 经过六个节点的确认之后，这10个别逼币就正式地合法地划到了小明的名下。
 
@@ -54,7 +54,7 @@
 
 在区块链中，小明交彩礼的订单大概如下图所示：
 
-![image-20191204170947119](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20191204170947119.png)
+![image-20191204170947119](./images/2.png)
 
 这个订单一共产生了两个输出，也就是两个`UTXO`，一个是小绿他妈的，一个是小明自己的。
 

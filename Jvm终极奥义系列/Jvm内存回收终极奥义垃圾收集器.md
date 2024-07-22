@@ -28,7 +28,7 @@
 
 Serial收集器工作的时候会暂停掉其他工作线程，直到它收集结束，这对很多应用是难以接受的，比如你再打一款游戏java荣耀，正准备团战呢，Serial收集器站出来说，弟弟们先往边上靠靠，我要来收集垃圾了，给你暂停个五分钟，谁受得了，下面是Serial收集器的运行过程，其中新生代使用的是**复制算法**，老生代使用**标记-整理算法**
 
-![1568872004979](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1568872004979.png)
+![1568872004979](./images/jvm1.png)
 
 读者看到这里肯定会说了，这垃圾收集器也太垃圾了吧，其实不然，Serial的专一（单线程）收集在只有一个内核的系统中因为不需要去和其他回收线程进行交互，反而效率更高一点。
 
@@ -38,7 +38,7 @@ Serial收集器工作的时候会暂停掉其他工作线程，直到它收集�
 
 ParNew 收集器呢，其实就是Serial收集器的多线程版本，其中用到的收集算法，Stop the word（停顿类型STW，暂停其他线程），对象分配规则，回收策略几乎都与Serial收集器一模一样，但青出于蓝而胜于蓝，ParNew在实行垃圾回收的时候是采用多线程的，当然，这并不足以使它立足于java虚拟机的理由，它最大的优势就是和CMS关系特好，几乎是拜把子的兄弟，俩人合作起来默契十足，而这些，Serial 和 Parallel Scavenge收集器就只能相形见绌了，可见，一个好的队友是多么重要。ParNew的工作过程如下图所示:
 
-![1568872521976](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1568872521976.png)
+![1568872521976](./images/jvm2.png)
 
 
 
@@ -66,7 +66,7 @@ PS:吞吐量 = 用户运行代码时间/（用户运行代码时间+垃圾收集
 
 Serial Old收集器是Serial收集器的老年代版本，它同样是单线程的收集器，使用**标记-整理算法**，它主要工作在Client模式，两点呢，由于Parallel Scavenge收集器和Serial和cms收集器关系都不太好，所有它们两个成了好朋友，一个新生代，一个老年代，所以可以配合使用，第二个是作为CMS收集器的后备预案。它的工作图如下所示：
 
-![1568873684914](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1568873684914.png)
+![1568873684914](./images/jvm3.png)
 
 ## ParNew Old 收集器：
 
@@ -74,7 +74,7 @@ Serial Old收集器是Serial收集器的老年代版本，它同样是单线程�
 
 下图是ParNew Old 收集器运行示意图:
 
-![1568981106153](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1568981106153.png)
+![1568981106153](./images/jvm4.png)
 
 ## CMS收集器：
 
@@ -91,7 +91,7 @@ CMS收集器，全称Concurrent Mark Sweep 收集器，和大多数收集器类�
 
 执行流程如下:
 
-![1568981482051](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1568981482051.png)
+![1568981482051](./images/jvm5.png)
 
 虽然CMS收集器是今日之星收集器，但是也并非完全没有缺陷，其中有三个比较明显的问题。
 
@@ -131,7 +131,7 @@ G1的出现不是工程师们觉得垃圾回收器太少再随便加个，根据
 
 流程图如下:
 
-![1568982959774](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1568982959774.png)
+![1568982959774](./images/jvm6.png)
 
 
 

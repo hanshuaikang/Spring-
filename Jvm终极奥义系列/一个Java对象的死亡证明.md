@@ -92,7 +92,7 @@ B：我再反弹
 
 从GC Roots作为起点，向下搜索它们引用的对象，可以生成一棵引用树，树的节点视为可达对象，反之视为不可达。图长这样：
 
-![可达性分析算法](https://images.cnblogs.com/cnblogs_com/wupeixuan/1186116/o_4240985.jpg)
+![可达性分析算法](./images/jvm7.png)
 
 
 

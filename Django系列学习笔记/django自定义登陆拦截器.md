@@ -10,10 +10,6 @@ django的中间件主要分为五种:
 - 响应(Response)中间件->对应函数`process_response`
 - 异常(Exception)中间件->对应函数`process_exception`
 
-执行流程大概为：
-
-![3](G:\蓝鲸学习笔记\img\3.png)
-
 代码实现：
 
 新建一个python文件，代码如下 `process_request`为具体请求拦截的逻辑实现：

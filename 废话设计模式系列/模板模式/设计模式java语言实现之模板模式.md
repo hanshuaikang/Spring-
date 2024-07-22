@@ -6,8 +6,6 @@
 >
 > Github：https://github.com/hanshuaikang
 >
-> 个人技术博客:http://jdkcb.com/
->
 > 本篇文章电子版和配套代码下载地址:https://github.com/hanshuaikang/design-pattern-java
 >
 > 时间:2019-07-29

@@ -280,13 +280,21 @@ location块则用来对虚拟主机名称之外的字符串进行匹配，对特
 
 ```
 
+
 然后在浏览器中输入：服务器ip:8888 发现浏览器显示出来了8080端口tomcat的欢迎界面，从而实现了隐藏真实服务器地址这样一个反向代理的要求。
 
 哦？看着好神奇哦，那，我之前经常有看到那种，就是各种/image /video 不同的链接对应的是不同的网站，那也是这么做的咯？
 
-聪明，这里我们再新建一个tomcat容器，端口为8081，同时把在容器中tomcat webapps目录新建一个我们自己的目录，这里叫hello，里面新建一个hello.html文件，内容为<h1>I am hello<h1>
+聪明，这里我们再新建一个tomcat容器，端口为8081，同时把在容器中tomcat webapps目录新建一个我们自己的目录，这里叫hello，里面新建一个hello.html文件，内容为
+```html
+<h1>I am hello<h1>
+```
 
-同时我们在端口为8080的tomcat容器中，在webapps新建我们的文件家hi，并新建hi.html文件，内容为<h1>I am hi<h1>
+
+同时我们在端口为8080的tomcat容器中，在webapps新建我们的文件家hi，并新建hi.html文件，内容为
+```html
+<h1>I am hi<h1>
+```
 
 啊，这样的话配置是不是很难啊?
 
@@ -509,7 +517,7 @@ http {
 
 在浏览器中输入ip地址:8888/index.html,屏幕上显示我是一个静态界面，同时打开开发者工具
 
- ![img](https://user-gold-cdn.xitu.io/2019/10/30/16e1a8f4fbc01928?imageView2/0/w/1280/h/960/ignore-error/1) 
+ ![img](./img/4.png) 
 
 会发现jquery.js已经被正常请求到了。
 
